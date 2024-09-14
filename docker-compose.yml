@@ -1,0 +1,17 @@
+﻿include:
+  - mongodb/docker-compose.yml
+
+services:
+  emailsenderapi:
+    image: emailsenderapi
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__EmailsLogs=mongodb://user:pass@mongodb
+    ports:
+      - 5135:8080
+    build:
+      context: .
+      dockerfile: EmailSender.API/Dockerfile
+    depends_on:
+      mongodb:
+        condition: service_started
