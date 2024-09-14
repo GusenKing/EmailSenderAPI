@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailSender.API", "EmailSender.API\EmailSender.API.csproj", "{C7687F90-F126-4E94-81A5-E3B7F5A3CE8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{46E0C963-643F-46C1-A06E-7DC2EE9F6F6D}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailSender.Data", "EmailSender.Data\EmailSender.Data.csproj", "{39CB68BB-9CC9-4AC3-99F5-DAC35207B8E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7687F90-F126-4E94-81A5-E3B7F5A3CE8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7687F90-F126-4E94-81A5-E3B7F5A3CE8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7687F90-F126-4E94-81A5-E3B7F5A3CE8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7687F90-F126-4E94-81A5-E3B7F5A3CE8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39CB68BB-9CC9-4AC3-99F5-DAC35207B8E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39CB68BB-9CC9-4AC3-99F5-DAC35207B8E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39CB68BB-9CC9-4AC3-99F5-DAC35207B8E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39CB68BB-9CC9-4AC3-99F5-DAC35207B8E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
