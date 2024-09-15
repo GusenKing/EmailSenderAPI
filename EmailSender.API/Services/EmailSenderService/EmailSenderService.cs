@@ -22,7 +22,7 @@ public class EmailSenderService(IConfiguration configuration, IEmailLogsService 
 
             if (!smtpResult[0].Equals('2'))
                 sb.Append(
-                    $"Got this error code while sending email message to {addresses}: \n{smtpResult}\n"
+                    $"Got this error code while sending email message to {address}: {smtpResult}{Environment.NewLine}"
                 );
         }
 

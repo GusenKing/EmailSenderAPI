@@ -1,26 +1,14 @@
-using EmailSender.Data;
-using EmailSenderAPI.Repositories.EmailLogsRepository;
-using EmailSenderAPI.Services.EmailLogsService;
-using EmailSenderAPI.Services.EmailSenderService;
-using Microsoft.EntityFrameworkCore;
+using EmailSenderAPI.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<AppDbContext>(optionsBuilder =>
-{
-    optionsBuilder.UseMongoDB(
-        builder.Configuration.GetConnectionString("EmailsLogs")!,
-        "EmailsLogs"
-    );
-    optionsBuilder.EnableSensitiveDataLogging(true);
-});
+builder.Services.ConfigureDbContext(builder.Configuration);
 
-builder.Services.AddScoped<IEmailSenderService, EmailSenderService>();
-builder.Services.AddScoped<IEmailLogsService, EmailLogsService>();
-builder.Services.AddScoped<IEmailLogsRepository, EmailLogsRepository>();
+builder.Services.AddServices();
+builder.Services.AddRepositories();
 
 var app = builder.Build();
 
